@@ -170,7 +170,7 @@ endfunction
 
 function! buftabline#update(zombie)
 	set tabline=
-	" if tabpagenr('$') > 1 | set guioptions+=e showtabline=2 | return | endif
+	if tabpagenr('$') > 1 | set showtabline=2 | return | endif
 	" set guioptions-=e
 	if 0 == g:buftabline_show
 		set showtabline=1
